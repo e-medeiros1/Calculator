@@ -21,7 +21,7 @@ class Button extends StatelessWidget {
     this.color = DEFAULT,
     this.textStyle = const TextStyle(
       color: OPERATION,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontSize: 32,
     ),
     required this.cb,
@@ -47,11 +47,12 @@ class Button extends StatelessWidget {
     this.color = DEFAULT,
     this.textStyle = const TextStyle(
       color: OPERATION,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontSize: 32,
     ),
     required this.cb,
   }) : super(key: key);
+  
   Button.especials({
     Key? key,
     required this.text,
@@ -59,7 +60,7 @@ class Button extends StatelessWidget {
     this.color = DEFAULT,
     this.textStyle = const TextStyle(
       color: ESPECIAL,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       fontSize: 32,
     ),
     required this.cb,
@@ -70,11 +71,11 @@ class Button extends StatelessWidget {
     return Expanded(
       flex: big ? 2 : 1,
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(15.0),
         child: ElevatedButton(
           onPressed: () => cb(text),
           style: ButtonStyle(
-            visualDensity: VisualDensity.adaptivePlatformDensity,
+            // visualDensity: VisualDensity.adaptivePlatformDensity,
             shape: MaterialStateProperty.all(const CircleBorder()),
             backgroundColor: MaterialStateProperty.all(color),
           ),

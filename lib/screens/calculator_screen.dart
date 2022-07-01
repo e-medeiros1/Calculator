@@ -26,8 +26,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     return Scaffold(
         body: Column(
       children: [
-
-        DisplayScreenWidget(textDisplay: brain.value),
+        DisplayScreenWidget(
+          textDisplay:
+              brain.value.isEmpty ? brain.value : brain.showHistory(),
+        ),
         Keyboard(cb: _onPressed),
       ],
     ));

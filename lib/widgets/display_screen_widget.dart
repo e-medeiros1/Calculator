@@ -1,16 +1,34 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-class DisplayScreenWidget extends StatelessWidget {
+class DisplayScreenWidget extends StatefulWidget {
   final String textDisplay;
 
   const DisplayScreenWidget({Key? key, required this.textDisplay})
       : super(key: key);
 
   @override
+  State<DisplayScreenWidget> createState() => _DisplayScreenWidgetState();
+}
+
+ThemeData darkMode =
+    ThemeData(scaffoldBackgroundColor: const Color(0xFF170724));
+ThemeData lightMode = ThemeData(
+  scaffoldBackgroundColor: Colors.white,
+);
+
+class _DisplayScreenWidgetState extends State<DisplayScreenWidget> {
+  // bool themeSwitch = true;
+
+  // Widget buildSwitch() => Switch(
+  //     value: themeSwitch,
+  //     onChanged: (themeSwitch) {
+  //       setState(() => this.themeSwitch = themeSwitch);
+  //     });
+
+  @override
   Widget build(BuildContext context) {
     return Expanded(
-      //Ocupa toda a dimensão da tela
       flex: 1,
       child: Container(
         color: const Color(0xFF170724),
@@ -18,23 +36,16 @@ class DisplayScreenWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              child: Padding(
-                padding:  EdgeInsets.only(right: 12),
-                child: Text(
-                  textDisplay,
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: const Color(0x66FFFFFF),
-                  ),
-                ),
-              ),
-              alignment: const Alignment(1.0, 1.0),
-            ),
+            // Container(
+            //   child: buildSwitch(),
+            //   alignment: Alignment.topRight,
+            //   padding: const EdgeInsets.only(top: 20, right: 20),
+            // ),
+            const Spacer(),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(right: 20.0, bottom: 10),
               child: AutoSizeText(
-                textDisplay,
+                widget.textDisplay,
                 minFontSize: 20,
                 maxFontSize: 80,
                 maxLines: 1,
