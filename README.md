@@ -1,16 +1,9 @@
-# calculator
+# Calculator
 
-A new Flutter project.
+A simple calculator made with flutter
 
-## Getting Started
+ <p>Screen:</p>  
+<img src="https://user-images.githubusercontent.com/73318684/176931130-3b1afb69-84f9-4caf-a9bb-a4306f340dd9.png" width="250" alt="Calculator screen"/>
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+TODO: Implement toggle to switch between dark and light mode
